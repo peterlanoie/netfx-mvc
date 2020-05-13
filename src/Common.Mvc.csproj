@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DD0254BE-2CA0-4C7C-9A35-69CD9EEB004C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Common.Mvc</RootNamespace>
+    <AssemblyName>Common.Mvc</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Common.Mvc.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Common.Mvc.XML</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Mvc, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Attributes\ActionMethodSelector\AcceptParameterValueAttribute.cs" />
+    <Compile Include="Attributes\ActionMethodSelector\AcceptSubmitButtonAttribute.cs" />
+    <Compile Include="Attributes\ActionMethodSelector\AjaxGetAttribute.cs" />
+    <Compile Include="Attributes\ActionMethodSelector\AjaxAttribute.cs" />
+    <Compile Include="Attributes\AuthorizeFeatureAttribute.cs" />
+    <Compile Include="Attributes\AuthorizeByCookieAttribute.cs" />
+    <Compile Include="Attributes\ActionMethodSelector\AjaxPostAttribute.cs" />
+    <Compile Include="Attributes\HandleAjaxRedirectAttribute.cs" />
+    <Compile Include="Attributes\HandleJsonErrorAttribute.cs" />
+    <Compile Include="ControllerBase.cs" />
+    <Compile Include="DynamicRedirectResult.cs" />
+    <Compile Include="Extensions\ExtHtmlHelper_Css.cs" />
+    <Compile Include="Extensions\ExtHtmlHelper_Icons.cs" />
+    <Compile Include="Extensions\ExtHtmlHelper_Images.cs" />
+    <Compile Include="Extensions\ExtController.cs" />
+    <Compile Include="Extensions\ExtHtmlHelper_Buttons.cs" />
+    <Compile Include="Extensions\ExtHtmlHelper_Forms.cs" />
+    <Compile Include="Extensions\ExtHtmlHelper_Links.cs" />
+    <Compile Include="Extensions\ExtHtmlHelper_Logic.cs" />
+    <Compile Include="Extensions\ExtHtmlHelper_Requires.cs" />
+    <Compile Include="Extensions\ExtHtmlHelper_Script.cs" />
+    <Compile Include="Extensions\ExtHtmlHelper_Select.cs" />
+    <Compile Include="Extensions\ExtHttpContextBase.cs" />
+    <Compile Include="Extensions\ExtModelStateDictionary.cs" />
+    <Compile Include="Extensions\PageResourceTypes.cs" />
+    <Compile Include="TagBuilderHelper.cs" />
+    <Compile Include="Extensions\ExtUrlHelper.cs" />
+    <Compile Include="Extensions\ExtViewPage.cs" />
+    <Compile Include="Extensions\ExtViewUserControl.cs" />
+    <Compile Include="Filters\AppPathCookieFilter.cs" />
+    <Compile Include="Filters\AppPathFormsAuthCookieFilter.cs" />
+    <Compile Include="Filters\AppPathSessionCookieFilter.cs" />
+    <Compile Include="JavaScriptHelper.cs" />
+    <Compile Include="JsonErrorResult.cs" />
+    <Compile Include="JsonMessageResult.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ResultActionHelper.cs" />
+    <Compile Include="RouteValueHelper.cs" />
+    <Compile Include="TagBlock.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Common.Web\Common.Web.csproj">
+      <Project>{6F950440-92DE-436D-9104-A15274834466}</Project>
+      <Name>Common.Web</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="version.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Common.Mvc.build" />
+    <None Include="Common.Mvc.nuspec" />
+    <None Include="NuGet.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
